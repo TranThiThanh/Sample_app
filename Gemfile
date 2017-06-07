@@ -19,7 +19,6 @@ gem 'bcrypt',         '3.1.11'
 gem 'faker',          '1.6.6'
 gem 'will_paginate',           '3.1.0'
 gem 'bootstrap-will_paginate', '0.0.10'
-gem 'sendgrid-rails', '~> 2.0'
 # group :development, :test do
 #   gem 'sqlite3', platforms: [:mri, :mingw, :x64_mingw]
 #   gem 'capybara', '~> 2.13'
@@ -39,7 +38,8 @@ end
 
 group :production do
   gem 'pg'
-  gem 'rails_12factor'
+  gem 'rails_12factor'  
+  gem 'sendgrid-rails', '~> 2.0'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
