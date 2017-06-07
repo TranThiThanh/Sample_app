@@ -85,7 +85,7 @@ Rails.application.configure do
 
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  host = 'arcane-savannah-43691.herokuapp.com'
+  host = 'https://arcane-savannah-43691.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
@@ -93,7 +93,7 @@ Rails.application.configure do
     :authentication => :plain,
     :user_name      => ENV['SENDGRID_USERNAME'],
     :password       => ENV['SENDGRID_PASSWORD'],
-    :domain         => 'arcane-savannah-43691.herokuapp.com',
+    :domain         => 'heroku.com',
     :enable_starttls_auto => true
   }
   if ENV["RAILS_LOG_TO_STDOUT"].present?
