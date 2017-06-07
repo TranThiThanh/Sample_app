@@ -87,7 +87,6 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   host = 'arcane-savannah-43691.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
-  ActionMailer::Base.register_interceptor(SendGrid::MailInterceptor)
   ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
     :port           => '587',
