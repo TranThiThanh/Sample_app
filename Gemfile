@@ -20,6 +20,9 @@ gem 'faker',          '1.6.6'
 gem 'will_paginate',           '3.1.0'
 gem 'bootstrap-will_paginate', '0.0.10'
 gem 'sendgrid-rails'
+gem 'carrierwave',             '1.1.0'
+gem 'mini_magick',             '4.7.0'
+gem 'fog',                     '1.38.0'
 # group :development, :test do
 #   gem 'sqlite3', platforms: [:mri, :mingw, :x64_mingw]
 #   gem 'capybara', '~> 2.13'

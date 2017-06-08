@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :microposts, dependent: :destroy
+  has_many :microposts
   attr_accessor :remember_token, :activation_token, :reset_token
   before_save   :downcase_email
   before_create :create_activation_digest
@@ -35,8 +37,7 @@ class User < ApplicationRecord
   end
 
   def activate
-    update_attribute(:activated,    true)
-    update_attribute(:activated_at, Time.zone.now)
+     update_columns(activated: true, activated_at: Time.zone.now)
   end
 
   def send_activation_email
@@ -53,8 +54,11 @@ class User < ApplicationRecord
     UserMailer.password_reset(self).deliver_now
   end
   
-   def password_reset_expired?
+  def password_reset_expired?
     reset_sent_at < 2.hours.ago
+  end
+  def feed
+    Micropost.where("user_id = ?", id)
   end
   private
 
