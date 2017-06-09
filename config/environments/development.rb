@@ -45,11 +45,10 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
-  host = 'arcane-savannah-43691.herokuapp.com'
-  config.action_mailer.default_url_options = { host: host, protocol: 'https' }
+  config.action_mailer.default_url_options = { host: 'arcane-savannah-43691.herokuapp.com' }
   config.action_mailer.perform_caching = false
   config.action_mailer.smtp_settings = {
-    address:              'smtp.sendgrid.net',
+    address:              'smtp.gmail.com',
     port:                 587,
     domain:               'heroku.com',
     user_name:            'tranthithanhqt1397@gmail.com',
