@@ -70,7 +70,7 @@ Rails.application.configure do
   #   :enable_starttls_auto => true
   # }
   config.action_mailer.default :charset => "utf-8" 
-  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.raise_delivery_errors = false
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true  
   config.action_mailer.default_url_options = { :host => 'arcane-savannah-43691.herokuapp.com' }
@@ -80,7 +80,7 @@ Rails.application.configure do
     :authentication => :plain,
     :user_name      => ENV['tranthithanh1397@gmail.com'],
     :password       => ENV['10102010'],
-    :domain         => 'gmail.com',
+    :domain         => 'heroku.com',
     :enable_starttls_auto => true
   }
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
