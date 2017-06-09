@@ -48,9 +48,9 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'arcane-savannah-43691.herokuapp.com'}
   config.action_mailer.perform_caching = false
   config.action_mailer.smtp_settings = {
-    address:              'smtp.sendgrid.net',
+    address:              'smtp.gmail.com',
     port:                 587,
-    domain:               'heroku.com',
+    domain:               'arcane-savannah-43691.herokuapp.com',
     user_name:            'tranthithanhqt1397@gmail.com',
     password:             '10102010',
     authentication:       :plain,
