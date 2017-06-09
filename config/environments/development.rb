@@ -25,31 +25,15 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
   
-  # config.action_mailer.default :charset => "utf-8"
-  # config.action_mailer.raise_delivery_errors = true
-  # config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.perform_deliveries = true
-  # host = 'localhost:3000'
-  # config.action_mailer.default_url_options = { host: host, protocol: 'https' }
-  # config.action_mailer.perform_caching = false
-  # config.action_mailer.smtp_settings = {
-  #   address:              'smtp.gmail.com',
-  #   port:                 587,
-  #   domain:               'gmail.com',
-  #   user_name:            'tranthithanhqt1397@gmail.com',
-  #   password:             '10102010',
-  #   authentication:       :plain,
-  #   enable_starttls_auto: true
-  # }
-
   config.action_mailer.default :charset => "utf-8"
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.default_url_options = { host: 'localhost:3000' }
+  host = 'localhost:3000'
+  config.action_mailer.default_url_options = { host: host, protocol: 'https' }
   config.action_mailer.perform_caching = false
   config.action_mailer.smtp_settings = {
-    address:              "smtp.gmail.com",
+    address:              'smtp.gmail.com',
     port:                 587,
     domain:               'gmail.com',
     user_name:            'tranthithanhqt1397@gmail.com',
@@ -57,6 +41,7 @@ Rails.application.configure do
     authentication:       :plain,
     enable_starttls_auto: true
   }
+
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
