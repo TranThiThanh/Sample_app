@@ -62,12 +62,12 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true 
   config.action_mailer.default_url_options = { host: 'arcane-savannah-43691.herokuapp.com' }
   ActionMailer::Base.smtp_settings = {
-    :address        => 'smtp.gmail.com',
+    :address        => 'smtp.sendgrid.net',
     :port           => '587',
     :authentication => :plain,
     :user_name      => ENV['tranthithanh1397@gmail.com'],
     :password       => ENV['10102010'],
-    :domain         => 'gmail.com',
+    :domain         => 'arcane-savannah-43691.herokuapp.com',
     :enable_starttls_auto => true
   }
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
